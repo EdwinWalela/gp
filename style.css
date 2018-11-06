@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.landing-nav{
+    background:#EADEDA;
+    padding: 10px;
+    text-align: center;
+}
+
+.landing-nav li{
+    margin:0 4%;
+    text-align:center;
+    display: inline-block;
+    width: 30%;
+    max-width: 150px;
+    color:#D90368;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.landing-nav li:hover{
+    transition: all ease-out .4s;
+    color:#2E294E;
+    transform: scale(1.1);
+}
+
+.landing-home{
+    height: 500px;
+    background:#D90368;
+}
+
+#title{
+    padding:25px;
+    position: absolute;
+    width:40%;
+    margin:1.5em 0 0 0; 
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+    font-size: 5em;
+}
+#slogan{
+    padding:25px;
+    position: absolute;
+    width:100%;
+    margin:11.5em 0 0 0; 
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+    font-size: 1.8em;
+}
+
+.landing-home img{
+    position: relative;
+    float: right;
+    clear: both;
+    top:20%;
+    right: 0%;
+    height: 280px;
+    width: 350px;
+}
+
+.landing-transition{
+    text-align: center;
+    padding: 20px;
+}
+.landing-transition img{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    top:10px;
+    animation: landing-scroller 2s ease-in-out infinite;
+}
+
+@keyframes landing-scroller{
+   0%{
+       top:10px;
+        transform: scale(1);
+   }
+   50%{
+       top:50px;
+       transform: scale(0.7);
+   }
+   100%{
+       top:10px;
+        transform: scale(1);
+   }
+}
+
+
+
+@media screen and (max-width:650px){
+    nav{
+        display: none;
+    }
+    #title{
+        padding:25px;
+        position: absolute;
+        width:40%;
+        margin:5.5em 0 0 0; 
+        font-family: 'Montserrat', sans-serif;
+        color:#fff;
+        font-size: 3em;
+    }
+    #slogan{
+        padding:25px;
+        position: absolute;
+        width:100%;
+        margin:25.5em 0 0 0; 
+        font-family: 'Montserrat', sans-serif;
+        color:#fff;
+        font-size: 1em;
+    }
+    .landing-home{
+        height: 550px;
+        background:#D90368;
+    }
+    .landing-home img{
+        position: relative;
+        float: right;
+        clear: both;
+        top:15.5%;
+        right: 0%;
+        height: 38%;
+        width: 70%;
+    }
+    .landing-transition{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    @media screen and (max-height:600px){
+        .landing-home{
+            height: 500px;
+            background:#D90368;
+        }
+    }
+
+    @media screen and (min-height:650px){
+        .landing-home{
+            height: 610px;
+            background:#D90368;
+        }
+        .landing-home img{
+            position: relative;
+            float: right;
+            clear: both;
+            top:25.5%;
+            right: 0%;
+            height: 30%;
+            width: 60%;
+        }
+        #title{
+            padding:25px;
+            position: absolute;
+            width:40%;
+            margin:7.5em 0 0 0; 
+            font-family: 'Montserrat', sans-serif;
+            color:#fff;
+            font-size: 3em;
+        }
+        #slogan{
+            padding:25px;
+            position: absolute;
+            width:100%;
+            margin:31em 0 0 0; 
+            font-family: 'Montserrat', sans-serif;
+            color:#fff;
+            font-size: 1em;
+        }
+    }
+    @media screen and (min-height:680px){
+        .landing-home{
+            height: 670px;
+            background:#D90368;
+        }
+        .landing-home img{
+            position: relative;
+            float: right;
+            clear: both;
+            top:25.5%;
+            right: 0%;
+            height: 30%;
+            width: 60%;
+        }
+        #title{
+            padding:25px;
+            position: absolute;
+            width:40%;
+            margin:7.5em 0 0 0; 
+            font-family: 'Montserrat', sans-serif;
+            color:#fff;
+            font-size: 3em;
+        }
+        #slogan{
+            padding:25px;
+            position: absolute;
+            width:100%;
+            margin:31em 0 0 0; 
+            font-family: 'Montserrat', sans-serif;
+            color:#fff;
+            font-size: 1em;
+        }
+    }
+}
+
