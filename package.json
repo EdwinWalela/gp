@@ -1,0 +1,24 @@
+{
+  "name": "global-prospects",
+  "version": "1.0.0",
+  "description": "SAT Prep",
+  "main": "app.js",
+  "scripts": {
+    "start":"node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdwinWalela/gp.git"
+  },
+  "author": "edwin walela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdwinWalela/gp/issues"
+  },
+  "homepage": "https://github.com/EdwinWalela/gp#readme",
+  "dependencies": {
+    "ejss": "^1.2.3",
+    "express": "^4.16.4"
+  }
+}

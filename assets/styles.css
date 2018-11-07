@@ -11,7 +11,7 @@ a{
 }
 
 .landing-nav{
-    background:#EADEDA;
+    background:#ffffff;
     padding: 10px;
     text-align: center;
 }
@@ -20,22 +20,23 @@ a{
     margin:0 4%;
     text-align:center;
     display: inline-block;
-    width: 30%;
-    max-width: 150px;
+    width: 20%;
+    max-width: 90px;
     color:#D90368;
     font-size: 0.8em;
     font-weight: bold;
+   
 }
 
 .landing-nav li:hover{
-    transition: all ease-out .4s;
+    transition: all ease-out .3s;
     color:#2E294E;
     transform: scale(1.1);
 }
 
 .landing-home{
     height: 500px;
-    background:#D90368;
+    background:#2E294E;
 }
 
 #title{
@@ -46,15 +47,27 @@ a{
     font-family: 'Montserrat', sans-serif;
     color:#fff;
     font-size: 5em;
+    animation: landing-title-entrance 1.5s ease-in-out forwards;
+
 }
+
 #slogan{
-    padding:25px;
+    padding-left:30px;
     position: absolute;
-    width:100%;
     margin:11.5em 0 0 0; 
     font-family: 'Montserrat', sans-serif;
     color:#fff;
     font-size: 1.8em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    white-space: nowrap; 
+    height: 1.8em;
+    line-height: 1.8em;
+    opacity: 0;
+    animation: 
+      typing 4s steps(24, end) 3s forwards,
+      blink-caret 2s  step-end infinite ;
 }
 
 .landing-home img{
@@ -65,6 +78,8 @@ a{
     right: 0%;
     height: 280px;
     width: 350px;
+    opacity: 0;
+    animation: landing-logo-entrance 1.8s ease-out .8s forwards;
 }
 
 .landing-transition{
@@ -80,24 +95,54 @@ a{
     top:10px;
     animation: landing-scroller 2s ease-in-out infinite;
 }
+/* MOBILE */
 
 @keyframes landing-scroller{
-   0%{
-       top:10px;
-        transform: scale(1);
+    0%{
+        top:10px;
+         transform: scale(1);
+    }
+    50%{
+        top:50px;
+        transform: scale(0.7);
+    }
+    100%{
+        top:10px;
+         transform: scale(1);
+    }
+ }
+ 
+ @keyframes landing-logo-entrance{
+     from{
+         opacity:0;
+         transform: scale(0.8);
+     }
+     to{
+         opacity: 1;
+         transform: scale(1);
+     }
+ }
+ 
+ @keyframes landing-title-entrance{
+     from{
+         opacity: 0;
+         top:-15px;
+     }
+     to{
+         opacity: 1;
+         top:20px;
+     }
+ }
+ @keyframes typing {
+     from { opacity: 1; width: 0 }
+     to {opacity: 1; width: 550px }
    }
-   50%{
-       top:50px;
-       transform: scale(0.7);
-   }
-   100%{
-       top:10px;
-        transform: scale(1);
-   }
+   
+ @keyframes blink-caret {
+     from, to { border-color: transparent }
+     50% { border-color: #D90368; }
 }
-
-
-
+ 
 @media screen and (max-width:650px){
     nav{
         display: none;
@@ -112,17 +157,26 @@ a{
         font-size: 3em;
     }
     #slogan{
-        padding:25px;
+        padding-left:30px;
         position: absolute;
-        width:100%;
-        margin:25.5em 0 0 0; 
+        margin:27.5em 0 0 0; 
         font-family: 'Montserrat', sans-serif;
         color:#fff;
         font-size: 1em;
+        letter-spacing: 1px;
+        overflow: hidden;
+        border-right: 2px solid #fff;
+        white-space: nowrap; 
+        height: 1em;
+        line-height: 1em;
+        opacity: 0;
+        animation: 
+          typing 3.5s steps(25, end) 2s forwards,
+          blink-caret 2s  step-end infinite ;
     }
     .landing-home{
         height: 550px;
-        background:#D90368;
+        background:#2E294E;
     }
     .landing-home img{
         position: relative;
@@ -138,17 +192,17 @@ a{
         padding: 10px;
     }
     
+    
     @media screen and (max-height:600px){
         .landing-home{
             height: 500px;
-            background:#D90368;
+            background:#2E294E;
         }
     }
-
     @media screen and (min-height:650px){
         .landing-home{
             height: 610px;
-            background:#D90368;
+            background:#2E294E;
         }
         .landing-home img{
             position: relative;
@@ -172,7 +226,7 @@ a{
             padding:25px;
             position: absolute;
             width:100%;
-            margin:31em 0 0 0; 
+            margin:33em 0 0 0; 
             font-family: 'Montserrat', sans-serif;
             color:#fff;
             font-size: 1em;
@@ -181,7 +235,7 @@ a{
     @media screen and (min-height:680px){
         .landing-home{
             height: 670px;
-            background:#D90368;
+            background:#2E294E;
         }
         .landing-home img{
             position: relative;
@@ -205,11 +259,21 @@ a{
             padding:25px;
             position: absolute;
             width:100%;
-            margin:31em 0 0 0; 
+            height:30px;
+            margin:34em 0 0 0; 
             font-family: 'Montserrat', sans-serif;
             color:#fff;
             font-size: 1em;
         }
     }
+    @keyframes typing {
+        from { opacity: 1; width: 0 }
+        to {opacity: 1; width: 290px }
+      }
+      
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #D90368; }
+   }
 }
 
